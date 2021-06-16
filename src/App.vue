@@ -4,17 +4,16 @@
       <Menu />
     </div>
     <div class="app_content">
-      <MapView />
-      <SetView />
+      <Study />
     </div>
   </div>
 </template>
 <script>
-import study from "@/study";
+import Study from "@/views/study/study";
 import Menu from "@/views/menu/menu";
 export default {
   components: {
-    ...study,
+    Study,
     Menu,
   },
 };
