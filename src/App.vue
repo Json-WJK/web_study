@@ -4,16 +4,14 @@
       <Menu />
     </div>
     <div class="app_content">
-      <Study />
+      <router-view />
     </div>
   </div>
 </template>
 <script>
-import Study from "@/views/study/study";
 import Menu from "@/views/menu/menu";
 export default {
   components: {
-    Study,
     Menu,
   },
 };
@@ -34,6 +32,8 @@ export default {
     overflow-y: scroll;
   }
   .app_content {
+    box-sizing: border-box;
+    padding: 20px;
     flex: 1;
     height: 100%;
     overflow-x: hidden;
