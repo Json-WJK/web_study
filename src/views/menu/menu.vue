@@ -1,6 +1,6 @@
 <template>
   <div class="menu">
-    <el-menu :uniqueOpened="true" default-active="0">
+    <el-menu :uniqueOpened="true" :default-active="menuList[0].name">
       <el-menu-item
         v-for="(item, index) in menuList"
         :key="index"
