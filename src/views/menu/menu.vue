@@ -1,6 +1,6 @@
 <template>
   <div class="menu">
-    <el-menu :uniqueOpened="true" :default-active="menuList[0].name">
+    <el-menu :uniqueOpened="true" :default-active="'/'">
       <el-menu-item
         v-for="(item, index) in menuList"
         :key="index"
@@ -18,8 +18,7 @@ import router from "@/router/routers/study";
 import { reactive } from "vue";
 export default {
   setup() {
-    const menuList = reactive(router.filter(item => item.path != '/'));
-    console.log(menuList)
+    const menuList = reactive(router.filter((item) => item.path != "/"));
     return { menuList };
   },
 };
